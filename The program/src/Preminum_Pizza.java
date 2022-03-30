@@ -1,7 +1,7 @@
 public class Preminum_Pizza {
     private Integer breadType=0;
     private Integer meat=0;
-    private Double price;
+    private Double price=0.0;
 
     public Preminum_Pizza(Integer bread, Integer meatType) {
         this.breadType = bread;
@@ -9,12 +9,13 @@ public class Preminum_Pizza {
     }
 
     public void setBtype(Integer breadType) {
-
         this.breadType=breadType;
     }
     public void setMtype(Integer meat) {
-
         this.meat=meat;
+    }
+    public void setPrice(Double addprice){
+        this.price=addprice;
     }
     public Integer getBtype()
     {

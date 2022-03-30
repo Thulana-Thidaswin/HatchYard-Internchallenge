@@ -1,7 +1,7 @@
 public class HealthyPizza {
     private Integer breadType=0;
     private Integer meat=0;
-    private Double price;
+    private Double price=0.0;
 
     public HealthyPizza(Integer bread, Integer meatType) {
         this.breadType = bread;
@@ -14,9 +14,13 @@ public class HealthyPizza {
     public void setMtype(Integer meat) {
         this.meat=meat;
     }
+    public void setPrice(Double addprice){
+        this.price=addprice;
+    }
     public Integer getBtype(){
         return breadType;
     }
+
     public Integer getMtype(){
         return meat;
     }
