@@ -1,9 +1,9 @@
 public class HealthyPizza {
-    private Integer breadType = 0;
-    private Integer meat = 0;
-    private Double price = 0.0;
+    private static Integer breadType = 0;
+    private static Integer meat = 0;
+    private static Double price = 0.0;
     private static Integer[] list={0, 0, 0, 0,0,0};
-    private Integer counter = 0;
+    private static Integer counter = 0;
 
     public HealthyPizza(Integer bread, Integer meatType, Double currentPrice) {
         this.breadType = bread;
@@ -39,20 +39,17 @@ public class HealthyPizza {
         return price;
     }
 
-    public Integer getList(Integer position) {
+    public static Integer getList(Integer position) {
         return list[position];
     }
 
-    public void viewPrice() {
+    public static void viewPrice() {
         Double totalPrice = 0.0;
-
+        System.out.println("-----------------------------------------------------------------");
         System.out.println("This is your Bill till now");
-        if (breadType == 0) {
-            System.out.println("Whole wheat bread-----------$2.00");
-        } else {
-            System.out.println("Kurakhan bread-----------$3.00");
-            totalPrice = totalPrice + 3.00;
-        }
+        System.out.println("Kurakhan bread-----------$3.00");
+        totalPrice = totalPrice + 3.00;
+
         switch (meat) {
             case 1:
                 System.out.println("Chicken-----------$5.00");
@@ -100,11 +97,13 @@ public class HealthyPizza {
                     break;
 
             }
-        counter=counter+1;
+            counter=counter+1;
         }
         totalPrice = totalPrice + price;
+        counter=0;
         System.out.println();
         System.out.println(("The grand Total of your bill is......") + totalPrice);
+        System.out.println("-----------------------------------------------------------------");
 
 
     }
