@@ -1,14 +1,6 @@
 import java.util.Scanner;
 
 public class PizzaYard_Pvt_Ltd {
-    private static void Menu() {
-        System.out.println("--------------------------------");
-        System.out.println("Our Menu");
-        System.out.println("1) Pizza");
-        System.out.println("More to come soon......");
-        System.out.println("--------------------------------");
-        System.out.print("Please enter your option   ");
-    }
 
     private static void MeatMenu() {
         System.out.println("--------------------------------");
@@ -17,6 +9,7 @@ public class PizzaYard_Pvt_Ltd {
         System.out.println("2) Beef ");
         System.out.println("3) Mutton");
         System.out.println("4) Sea Food");
+        System.out.println("9) To check your bill");
         System.out.print("Please enter your option   ");
 
     }
@@ -32,6 +25,7 @@ public class PizzaYard_Pvt_Ltd {
         System.out.println("6) Spicy");
         System.out.println("7) Garlic Bread");
         System.out.println("8) Thin Crust");
+        System.out.println("9) To check your bill");
         System.out.print("Please enter your option   ");
 
     }
@@ -44,6 +38,12 @@ public class PizzaYard_Pvt_Ltd {
         System.out.println("3) Premium Pan Pizza");
         System.out.print("Please enter your option   ");
     }
+    private static void CheckPrice(Integer pizzaType){
+        if (pizzaType==1){
+            Pizza.viewPrice();
+        }
+    }
+
 
     public static void main(String[] args) {
         Scanner userInput = new Scanner(System.in);
@@ -78,6 +78,7 @@ public class PizzaYard_Pvt_Ltd {
             }
         }
 
+
         MeatMenu();
         try {
             meatType = Integer.parseInt(userInput.nextLine());
@@ -100,6 +101,7 @@ public class PizzaYard_Pvt_Ltd {
                 userItem = Integer.parseInt(userInput.nextLine());
                 items[optionalItems] = userItem;
                 optionalItems++;
+
             } catch (NumberFormatException e) {
                 System.out.println("Please enter a number please");
             }
@@ -129,6 +131,7 @@ public class PizzaYard_Pvt_Ltd {
             if (items[counter] == 8) {
                 addtionalPrice = addtionalPrice + 5.00;
             }
+            counter++;
         }
         NormalPizza.setPrice(addtionalPrice);
         HPizza.setPrice(addtionalPrice);
@@ -137,8 +140,8 @@ public class PizzaYard_Pvt_Ltd {
             HPizza.setList(items[i], i);
             NormalPizza.setList(items[i], i);
             PrePizza.setList(items[i], i);
-
         }
+        Pizza.viewPrice();
 
 
     }

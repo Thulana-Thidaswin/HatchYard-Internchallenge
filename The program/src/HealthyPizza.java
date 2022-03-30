@@ -2,7 +2,7 @@ public class HealthyPizza {
     private Integer breadType = 0;
     private Integer meat = 0;
     private Double price = 0.0;
-    private Integer list[];
+    private static Integer[] list={0, 0, 0, 0,0,0};
     private Integer counter = 0;
 
     public HealthyPizza(Integer bread, Integer meatType, Double currentPrice) {
@@ -98,11 +98,13 @@ public class HealthyPizza {
                 case 8:
                     System.out.println("Thin Crust-----------$5.00");
                     break;
+
             }
-            totalPrice = totalPrice + price;
-            System.out.println();
-            System.out.println(("The grand Total of your bill is......") + totalPrice);
+        counter=counter+1;
         }
+        totalPrice = totalPrice + price;
+        System.out.println();
+        System.out.println(("The grand Total of your bill is......") + totalPrice);
 
 
     }

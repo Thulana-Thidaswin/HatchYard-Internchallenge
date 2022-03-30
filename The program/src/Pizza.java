@@ -1,10 +1,10 @@
 public class Pizza {
 
-    private Integer breadType = 0;
-    private Integer meat = 0;
-    private Double price = 0.0;
-    private Integer list[];
-    private Integer counter = 0;
+    private static Integer breadType = 0;
+    private static Integer meat = 0;
+    private static Double price = 0.0;
+    private static Integer[] list={0, 0, 0, 0,0,0};
+    private static Integer counter = 0;
 
     public Pizza(Integer bread, Integer meatType, Double currentPrice) {
         this.breadType = bread;
@@ -40,11 +40,11 @@ public class Pizza {
         return price;
     }
 
-    public Integer getList(Integer position) {
+    public static Integer getList(Integer position) {
         return list[position];
     }
 
-    public void viewPrice() {
+    public static void viewPrice() {
         Double totalPrice = 0.0;
 
         System.out.println("This is your Bill till now");
@@ -100,10 +100,11 @@ public class Pizza {
                     System.out.println("Thin Crust-----------$5.00");
                     break;
             }
-            totalPrice = totalPrice + price;
-            System.out.println();
-            System.out.println(("The grand Total of your bill is......") + totalPrice);
+            counter=counter+1;
         }
+        totalPrice = totalPrice + price;
+        System.out.println();
+        System.out.println(("The grand Total of your bill is......") + totalPrice);
 
 
     }

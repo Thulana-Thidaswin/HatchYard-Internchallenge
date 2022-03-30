@@ -2,7 +2,7 @@ public class Preminum_Pizza {
     private Integer breadType = 0;
     private Integer meat = 0;
     private Double price = 0.0;
-    private Integer list[];
+    private static Integer[] list={0, 0, 0, 0,0,0};
     private Integer counter = 0;
 
     public Preminum_Pizza(Integer bread, Integer meatType, Double currentPrice) {
