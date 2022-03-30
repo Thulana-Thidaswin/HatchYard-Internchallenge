@@ -24,5 +24,13 @@ public class Pizza {
         public Double getPrice(){
             return price;
         }
+    private static void Menu(){
+        System.out.println("--------------------------------");
+        System.out.println("Our Menu");
+        System.out.println("1) Pizza");
+        System.out.println("More to come soon......");
+        System.out.println("--------------------------------");
+        System.out.print("Please enter your option   ");
+    }
 
     }
