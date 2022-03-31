@@ -180,9 +180,6 @@ public class PizzaYard_Pvt_Ltd {
                 toppingsChecker = false;
             }
         }
-        /**
-         * This while loop is used calculate the total price of the optional toppings
-         */
         NormalPizza.setPrice(addtionalPrice); //The setter of the class is called and the price is updated
         HPizza.setPrice(addtionalPrice);
         /**
@@ -192,6 +189,7 @@ public class PizzaYard_Pvt_Ltd {
             HPizza.setList(items[i], i);
             NormalPizza.setList(items[i], i);
         }
+        //Diplay the final bill
         CheckPrice(type);
 
 
